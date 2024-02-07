@@ -1,12 +1,12 @@
 public class Operator
 {
-    int[] randomArray;
+    private int[] randomArray;
 
     public int[] formArray(int[] randomArray, int arraySize)
     {
         for(int a = 0; a < arraySize; a++)
         {
-            randomArray[a] = Math.random(100);
+            randomArray[a] = (int)(Math.random() * 1000);
         }
 
         return randomArray;
