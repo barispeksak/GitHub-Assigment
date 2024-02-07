@@ -40,5 +40,33 @@ public class Operator
         return smallestNum;
     }
     //task C finishes here
+
+    public static int ToFindSumOfEven (int[] merhaba)
+    {
+        
+        int sumOfEven = 0;
+        for(int i = 0 ; i < merhaba.length ; i++)
+        {
+            if(i % 2 == 0)
+            {
+                sumOfEven += merhaba[i];
+            }
+            
+        }
+        return sumOfEven;
+    }
+    public static int ToFindSumOfOdd (int[] merhaba)
+    {
+        int sumOfOdd = 0;
+        for(int i = 0 ; i < merhaba.length ; i++)
+        {
+            if(i % 2 != 0)
+            {
+                sumOfOdd += merhaba[i];
+            }
+            
+        }
+        return sumOfOdd;
+    }
 }
 
