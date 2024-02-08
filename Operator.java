@@ -1,23 +1,25 @@
 public class Operator
-{
+{    
     private int[] randomArray;
-
-    public int[] formArray(int[] randomArray, int arraySize)
+    private int arraySize;
+    
+    //Task A is buried in the constructor. (Ege)
+    public Operator(int arrayLength)
     {
-        for(int a = 0; a < arraySize; a++)
+        this.randomArray = new int[arrayLength];
+        this.arraySize = arrayLength;
+        
+        for(int a = 0; a < arrayLength; a++)
         {
-            randomArray[a] = (int)(Math.random() * 1000);
+            this.randomArray[a] = (int)(Math.random() * 1000);
         }
-
-        return randomArray;
     }
 
-
     //task C added by Ozan
-    public static int theBiggestOfArray (int[] givenArray)
+    public int theBiggestOfArray ()
     {
-        int biggestNum = givenArray[0];
-        for(int num: givenArray)
+        int biggestNum = this.randomArray[0];
+        for(int num: this.randomArray)
         {
             if (num > biggestNum)
             {
@@ -27,10 +29,10 @@ public class Operator
         return biggestNum;
     }
 
-    public static int theSmallestOfArray (int[] givenArray)
+    public int theSmallestOfArray ()
     {
-        int smallestNum = givenArray[0];
-        for(int num: givenArray)
+        int smallestNum = this.randomArray[0];
+        for(int num: this.randomArray)
         {
             if (num < smallestNum)
             {
@@ -41,53 +43,54 @@ public class Operator
     }
     //task C finishes here
 
-    public static int ToFindSumOfEven (int[] merhaba)
+    public int ToFindSumOfEven ()
     {
-        
         int sumOfEven = 0;
-        for(int i = 0 ; i < merhaba.length ; i++)
+        for(int i = 0 ; i < this.arraySize ; i++)
         {
             if(i % 2 == 0)
             {
-                sumOfEven += merhaba[i];
+                sumOfEven += this.randomArray[i];
             }
-            
         }
         return sumOfEven;
     }
-    public static int ToFindSumOfOdd (int[] merhaba)
+    public int ToFindSumOfOdd ()
     {
         int sumOfOdd = 0;
-        for(int i = 0 ; i < merhaba.length ; i++)
+        for(int i = 0 ; i < this.arraySize ; i++)
         {
             if(i % 2 != 0)
             {
-                sumOfOdd += merhaba[i];
+                sumOfOdd += this.randomArray[i];
             }
-            
         }
         return sumOfOdd;
     }
 
     //Task D
-    public int[] differences(int[] numbers)
+    public int[] differences()
     {
         int total = 0;
-        for(int number : numbers)
+        for(int number : this.randomArray)
         {
             total += number;
         }
-        int avarage = total / numbers.length;
+        int avarage = total / this.arraySize;
 
-        int[] newArray = new int[numbers.length];
+        int[] newArray = new int[this.arraySize];
 
-        for (int i = 0; i < numbers.length; i++) 
+        for (int i = 0; i < this.arraySize; i++) 
         {
-            newArray[i] = numbers[i] - avarage;
+            newArray[i] = this.randomArray[i] - avarage;
         }
 
         return newArray;
     }
 
+    //Getter method for reaching the array.(Ege)
+    public int[] getArray()
+    {
+        return this.randomArray;
+    }
 }
-
