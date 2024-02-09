@@ -11,7 +11,7 @@ public class Operator
         
         for(int a = 0; a < arrayLength; a++)
         {
-            this.randomArray[a] = (int)(Math.random() * 1000);
+            this.randomArray[a] = (int)(Math.random() * 100);
         }
     }
 
