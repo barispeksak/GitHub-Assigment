@@ -68,7 +68,10 @@ public class Operator
         return sumOfOdd;
     }
 
-    //Task D
+    /*
+     * @author Barış Peksak
+     * This methods aims to find avarage of the array and subtract average from all values.
+     */
     public int[] differences()
     {
         int total = 0;
